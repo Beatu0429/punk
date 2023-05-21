@@ -1,8 +1,21 @@
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function Options( { sortingOption, setSortingOption } ){
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    function handleSortingOptionChange(e){
+        const option = e.target.value;
+        setSortingOption(option);
+        const queryParams = new URLSearchParams(location.search);
+        queryParams.set('sort', option);
+        navigate({ search: queryParams.toString() });
+      }
+
     return(
         <>
-            <select value={sortingOption} onChange={(e) => setSortingOption(e.target.value)}>
+            <select value={sortingOption} onChange={handleSortingOptionChange}>
                 <option value="">Sort By</option>
                 <option value="name">Name</option>
                 <option value="first_brewed">First Brewed</option>

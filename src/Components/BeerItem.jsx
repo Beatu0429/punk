@@ -1,3 +1,5 @@
+import './BeerItem.css'
+
 export default function BeerItem( { beer } ){
 
     return(
