@@ -1,0 +1,16 @@
+.list-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.card {
+    border: solid;
+    border-color: black;
+    border-width: 5px;
+    width: 250px;
+  }
+
+img {
+    width: 50px;
+}
