@@ -1,0 +1,35 @@
+select {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+    font-family: sans-serif;
+ }
+
+select:focus{ outline: none;}
+
+.box {
+    margin:20px auto;        
+    border:3px solid #fff;
+    border-radius: 15px;
+    height:30px;
+    width: 230px;
+    overflow: hidden;
+    position:relative;
+ }
+
+ .box::after{
+    content:"\025be";
+    display:table-cell;
+    text-align:center;
+    padding-top:7px;
+    width:30px;
+    height:30px;
+    background-color:#d9d9d9;
+    position:absolute;
+    top:0;
+    right:0px;
+    pointer-events: none;
+ }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Pagination.css'
 
 export default function Pagination( { perPage, onPageChange, currentPage, totalPages, onPerPageChange } ){
 
